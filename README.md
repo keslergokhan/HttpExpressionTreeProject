@@ -82,6 +82,8 @@ Görüldüğü gibi sorgu sql şeklinde iletiliyor ve respone başarılı bir ş
 ve daha güzeli bu bir Expression çıktısı veriyor yani ben bunu repository ilettim fakat siz faha farklı yerlere kullanabiliriniz herhangi bir IEnumerable listesinde de kullanabilirsiniz yani tamamen size kalmış
 
 ![Proje Logo](./assets/dateTime.png)
+diğer bir örnek
+![Proje Logo](./assets/content.png)
 
 <br>
 <br>
