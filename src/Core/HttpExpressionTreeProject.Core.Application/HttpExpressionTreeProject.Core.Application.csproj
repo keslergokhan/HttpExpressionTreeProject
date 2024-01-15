@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HttpExpressionTreeProject.Core.Domain\HttpExpressionTreeProject.Core.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HttpExpressionTreeProject.Core.Domain.Interfaces.Entities
+namespace HttpExpressionTreeProject.Core.Domain.Entities
 {
     public class Page : BaseEntity
     {

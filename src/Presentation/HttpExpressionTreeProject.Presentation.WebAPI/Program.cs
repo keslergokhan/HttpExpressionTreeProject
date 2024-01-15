@@ -1,4 +1,12 @@
+using HttpExpressionTreeProject.Infrastructure.Persistance;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddPersistance(opt =>
+{
+    opt.UseSqlServer(builder.Configuration.GetSection("Default").Value);
+});
 
 // Add services to the container.
 
