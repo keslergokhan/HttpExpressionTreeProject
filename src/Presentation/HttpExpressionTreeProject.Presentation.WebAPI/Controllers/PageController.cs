@@ -18,8 +18,8 @@ namespace HttpExpressionTreeProject.Presentation.WebAPI.Controllers
         [Route("GetPageFilter")]
         public async Task<IActionResult> GetPageFilter()
         {
-            
-            return Ok(this._pageServicei.GetFilterPages(HttpContext.HttExperssion()));
+            HttpExpression httpExpression = HttpContext.HttExperssion();
+            return Ok(this._pageServicei.GetFilterPages(httpExpression));
         }
     }
 }

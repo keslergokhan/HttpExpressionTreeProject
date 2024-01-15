@@ -17,5 +17,6 @@ namespace HttpExpressionTreeProject.Core.Domain.Entities
         [StringLength(1000)]
         public string Description { get; set; }
         public string? Content { get; set; }
+        public DateTime CreateDate { get; set; }
     }
 }

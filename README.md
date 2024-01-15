@@ -36,7 +36,52 @@ Nasıl sizce bence çok güzel :smile:
 
 Herşey HttpExpression adlı  singleton sınıfımda yürütülüyor, tüm işlemleri bir sınıfta yapmak istedim çünkü belki hoşunuza gider ve projenize daha kolay entegre edersiniz 😇
 
+Kod Detayları :
+**Link [HttpExpression.cs](https://github.com/keslergokhan/HttpExpressionTreeProject/blob/master/src/Core/HttpExpressionTreeProject.Core.Application/Services/HttpExpression.cs "HttpExpression.cs")**
 
+## Kullanım
+
+### 1) HttpExpression.cs
+HttpExpression sınıfını alın ve projenize dahil ediniz
+
+### 2) Controller Extension methodu çalıştırma
+
+Burada httpExpression nesnesini aldıktan sonra bu nesneyi karşılayacak olan bir servis hatmanınız veya hanlder vs ne varsa oraya göndermeniz gerekli
+
+
+    [HttpGet]
+            [Route("GetPageFilter")]
+            public async Task<IActionResult> GetPageFilter()
+            {
+                HttpExpression httpExpression = HttpContext.HttExperssion();
+                return Ok(this._pageServicei.GetFilterPages(httpExpression));
+            }
+
+### 3) Expression Parse
+Bu kod bloğunda bizim için önemli olan kısım '**httpExpression.GetFilterExperssion<Page>()**'  ve onu return değerini where içersine yolluyoruz.
+
+     public List<ReadPageDto> GetFilterPages(HttpExpression httpExpression)
+            {
+                //Projeyi daha fazla uzatmamak için select kullandım fakat siz mapper kullanın
+                return this._readPageRep.GetFilter(httpExpression.GetFilterExperssion<Page>()).Select(x=> new ReadPageDto
+                {
+                    Id = x.Id,
+                    Content = x.Content,
+                    Description = x.Description,
+                    State = x.State,
+                    Title = x.Title,
+                    Url = x.Url
+                    
+                }).ToList();
+            }
+### Sonuç
+
+![Proje Logo](./assets/filter-result.png)
+
+Görüldüğü gibi sorgu sql şeklinde iletiliyor ve respone başarılı bir şekilde geliyor 😱,
+ve daha güzeli bu bir Expression çıktısı veriyor yani ben bunu repository ilettim fakat siz faha farklı yerlere kullanabiliriniz herhangi bir IEnumerable listesinde de kullanabilirsiniz yani tamamen size kalmış
+
+![Proje Logo](./assets/dateTime.png)
 
 <br>
 <br>

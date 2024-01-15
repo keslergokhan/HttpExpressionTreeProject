@@ -30,7 +30,8 @@ namespace HttpExpressionTreeProject.Core.Application.Services
                 Description = x.Description,
                 State = x.State,
                 Title = x.Title,
-                Url = x.Url
+                Url = x.Url,
+                CreateDate = x.CreateDate,  
                 
             }).ToList();
         }

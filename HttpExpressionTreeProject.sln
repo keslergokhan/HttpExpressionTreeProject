@@ -14,13 +14,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{6F0E4652-B844-4396-ADAE-A7B8E5C82600}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpExpressionTreeProject.Core.Domain", "src\Core\HttpExpressionTreeProject.Core.Domain\HttpExpressionTreeProject.Core.Domain.csproj", "{198BBB19-3736-42E6-B640-254C508048E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpExpressionTreeProject.Core.Domain", "src\Core\HttpExpressionTreeProject.Core.Domain\HttpExpressionTreeProject.Core.Domain.csproj", "{198BBB19-3736-42E6-B640-254C508048E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpExpressionTreeProject.Core.Application", "src\Core\HttpExpressionTreeProject.Core.Application\HttpExpressionTreeProject.Core.Application.csproj", "{670DAF82-C07A-40B6-9B4B-D56B6C1F8704}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpExpressionTreeProject.Core.Application", "src\Core\HttpExpressionTreeProject.Core.Application\HttpExpressionTreeProject.Core.Application.csproj", "{670DAF82-C07A-40B6-9B4B-D56B6C1F8704}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpExpressionTreeProject.Infrastructure.Persistance", "src\Infrastructure\HttpExpressionTreeProject.Infrastructure.Persistance\HttpExpressionTreeProject.Infrastructure.Persistance.csproj", "{40C8BA40-8E2F-47DF-BD97-870329760EE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpExpressionTreeProject.Infrastructure.Persistance", "src\Infrastructure\HttpExpressionTreeProject.Infrastructure.Persistance\HttpExpressionTreeProject.Infrastructure.Persistance.csproj", "{40C8BA40-8E2F-47DF-BD97-870329760EE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpExpressionTreeProject.Presentation.WebAPI", "src\Presentation\HttpExpressionTreeProject.Presentation.WebAPI\HttpExpressionTreeProject.Presentation.WebAPI.csproj", "{9D7ED888-B273-4753-B3E7-FE8B134F92A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpExpressionTreeProject.Presentation.WebAPI", "src\Presentation\HttpExpressionTreeProject.Presentation.WebAPI\HttpExpressionTreeProject.Presentation.WebAPI.csproj", "{9D7ED888-B273-4753-B3E7-FE8B134F92A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{D34273C3-EB71-4A7A-A659-0C8AFAE88E16}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\OneDrive\Masaüstü\filter-result.png = ..\..\..\OneDrive\Masaüstü\filter-result.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
