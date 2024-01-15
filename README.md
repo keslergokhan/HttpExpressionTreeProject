@@ -87,6 +87,11 @@ diğer bir örnek
 
 Tabi bu proje size bir fikir vermesi için yapılmıştır daha geliştirilmesi gerekeen çok fazla noktası var artık bundan sonrası da sizde :relaxed:
 
+## Örnek Sorgular
+
+https://localhost:7198/api/page/getPageFilter?$filter=Content !eq null and (CreateDate < 2024-01-16 and State eq 1)
+![Proje Logo](./assets/date-state-content.png)
+
 <br>
 <br>
 <br>
