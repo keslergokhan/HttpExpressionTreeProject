@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HttpExpressionTreeProject.Core.Domain.Interfaces.Entities
+namespace HttpExpressionTreeProject.Core.Application.Interfaces.Dtos
 {
-    public interface IBasicEntity
+    public interface IBaseBasicEntityDto
     {
         public Guid Id { get; set; }
         public byte State { get; set; }
