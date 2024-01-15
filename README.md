@@ -85,6 +85,8 @@ ve daha güzeli bu bir Expression çıktısı veriyor yani ben bunu repository i
 diğer bir örnek
 ![Proje Logo](./assets/content.png)
 
+Tabi bu proje size bir fikir vermesi için yapılmıştır daha geliştirilmesi gerekeen çok fazla noktası var artık bundan sonrası da sizde :relaxed:
+
 <br>
 <br>
 <br>
