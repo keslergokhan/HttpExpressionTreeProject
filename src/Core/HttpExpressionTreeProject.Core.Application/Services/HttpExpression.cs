@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Net.Http;
@@ -110,21 +111,23 @@ namespace HttpExpressionTreeProject.Core.Application.Services
 
         public Expression<Func<T, bool>> GetFilterExpression<T>()
         {
-
+            //ihtiyaç duyulan temel yapılar
             this.EntityType = typeof(T);
             this.Entity = this.EntityType.Name;
             this.ParameterExpression = Expression.Parameter(this.EntityType, "x");
 
+            //Composite nesnesi oluşturma
             IGroupExpressionComposit baseGroupExpression = ExperssionAbstractFactory.CreateGroupExperssionComposit();
             baseGroupExpression.HttpExpressionData = ExperssionAbstractFactory.CreateHttpExperssionData(this.Filter);
 
-
+            //url üzerinden yapılan sorgunun ayrıştırılmasını üstlenen method
             this.UrlParseToCompositObject(this.Filter, null, baseGroupExpression);
 
             BinaryExpression binary = baseGroupExpression.GetBuildBinaryExpression();
             Expression<Func<T, bool>> w = Expression.Lambda<Func<T, bool>>(binary, ParameterExpression);
             return w;
         }
+
 
         /// <summary>
         /// Belitilen T içerisinde iletilen özellik adını kontrol eder,
@@ -265,10 +268,14 @@ namespace HttpExpressionTreeProject.Core.Application.Services
 
         private void HttpExpressionSetData(IExpressionComposit expressionComposit, string baseFilterQuery)
         {
+            //property adını ve eşitlik operatörünü ayrıştır
             this.FilterParsePropertyNameAndOperationType(expressionComposit);
+            //eşitlik operatorün karşısındaki value değeri object çevir
             this.FilterParseValue(expressionComposit);
 
+            //sorgu bütünündeki mantık operatörünü ayrıştır
             expressionComposit.HttpExpressionData.ExperssionMergeOperationType = this.GetQueriyLogicalOperatorType(expressionComposit.HttpExpressionData.UrlFilter, baseFilterQuery);
+            //sorguya göre ExperssionBinary oluştur
             this.HttpExpressionDataCreateBinary(expressionComposit);
         }
 
@@ -397,7 +404,11 @@ namespace HttpExpressionTreeProject.Core.Application.Services
             {
                 return dataTimeValue;
             }
-            else if (stringValue == "null")
+            else if (DateTime.TryParseExact(stringValue.Replace('–', '-'), "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out DateTime parsed))
+            {
+                return parsed;
+            }
+            else if (stringValue == "null" || stringValue == "NULL")
             {
                 return null;
             }
