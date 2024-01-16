@@ -53,7 +53,7 @@ Burada httpExpression nesnesini aldıktan sonra bu nesneyi karşılayacak olan b
             [Route("GetPageFilter")]
             public async Task<IActionResult> GetPageFilter()
             {
-                HttpExpression httpExpression = HttpContext.HttExperssion();
+                HttpExpression httpExpression = HttpContext.HttpExpression();
                 return Ok(this._pageServicei.GetFilterPages(httpExpression));
             }
 
