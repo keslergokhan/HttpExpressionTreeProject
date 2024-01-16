@@ -25,6 +25,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{D34273C3-EB71-4A7A-A659-0C8AFAE88E16}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\OneDrive\Masaüstü\content.png = ..\..\..\OneDrive\Masaüstü\content.png
+		..\..\..\OneDrive\Masaüstü\date-state-content.png = ..\..\..\OneDrive\Masaüstü\date-state-content.png
 		..\..\..\OneDrive\Masaüstü\dateTime.png = ..\..\..\OneDrive\Masaüstü\dateTime.png
 		..\..\..\OneDrive\Masaüstü\filter-result.png = ..\..\..\OneDrive\Masaüstü\filter-result.png
 	EndProjectSection

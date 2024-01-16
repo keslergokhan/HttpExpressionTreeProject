@@ -23,7 +23,7 @@ namespace HttpExpressionTreeProject.Core.Application.Services
         public List<ReadPageDto> GetFilterPages(HttpExpression httpExpression)
         {
             //Projeyi daha fazla uzatmamak için select kullandım fakat siz mapper kullanın
-            return this._readPageRep.GetFilter(httpExpression.GetFilterExperssion<Page>()).Select(x=> new ReadPageDto
+            return this._readPageRep.GetFilter(httpExpression.GetFilterExpression<Page>()).Select(x=> new ReadPageDto
             {
                 Id = x.Id,
                 Content = x.Content,

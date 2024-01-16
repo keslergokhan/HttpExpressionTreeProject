@@ -108,7 +108,7 @@ namespace HttpExpressionTreeProject.Core.Application.Services
         }
 
 
-        public Expression<Func<T, bool>> GetFilterExperssion<T>()
+        public Expression<Func<T, bool>> GetFilterExpression<T>()
         {
 
             this.EntityType = typeof(T);
